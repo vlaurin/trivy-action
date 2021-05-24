@@ -96,4 +96,5 @@ if [ $timeout ];then
 fi
 
 echo "Running trivy with options: " --no-progress "${ARGS}" "${artifactRef}"
+echo "trivy $GLOBAL_ARGS ${scanType} --no-progress $ARGS ${artifactRef}"
 trivy $GLOBAL_ARGS ${scanType} --no-progress $ARGS ${artifactRef}
