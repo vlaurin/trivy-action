@@ -95,6 +95,8 @@ if [ $timeout ];then
   ARGS="$ARGS --timeout $timeout"
 fi
 
+pwd
+ls -la
 echo "Running trivy with options: " --no-progress "${ARGS}" "${artifactRef}"
 echo "trivy $GLOBAL_ARGS ${scanType} --no-progress $ARGS ${artifactRef}"
 trivy $GLOBAL_ARGS ${scanType} --no-progress $ARGS ${artifactRef}
